@@ -13,7 +13,16 @@ import { Contato } from "./pages/Contato";
 import { Sobre } from "./pages/Sobre";
 import { Pagina404 } from "./pages/Pagina404";
 import { Layout } from "./pages/_Layout";
-import { Estado1 } from "./pages/Estado1";
+import { SemEstado } from "./pages/estado/semEstado";
+import { ComEstado } from "./pages/estado/ComEstado";
+import { CampoTexto } from "./pages/estado/CampoTexto";
+import { CalcStep } from "./pages/estado/CalcStep";
+import { ComunicacaoDireta } from "./pages/comunicacao/ComunicacaoDireta";
+import { ComunicacaoIndireta } from "./pages/comunicacao/ComunicacaoIndireta";
+import { UseRef } from "./pages/hoooks-basicos/UseRef";
+import { UseEffect } from "./pages/hoooks-basicos/UseEffect";
+import { Tradutor } from "./pages/exercicios/Tradutor";
+import { Revisao } from "./pages/exercicios/Revisao";
 
 // const rotas = createBrowserRouter([
 //   {path:"/", element: <Home/>},
@@ -30,14 +39,24 @@ const rotas = createBrowserRouter(
       <Route path="home" element={<Home />} />
       <Route path="contato" element={<Contato />} />
       <Route path="sobre" element={<Sobre />} />
-      <Route path="estado1" element={<Estado1 />} />
+      <Route path="semEstado" element={<SemEstado />} />
+      <Route path="comEstado" element={<ComEstado />} />
+      <Route path="campoTexto" element={<CampoTexto />} />
+      <Route path="calcStep" element={<CalcStep />} />
+      <Route path="comunicacaoDireta" element={<ComunicacaoDireta />} />
+      <Route path="comunicacaoIndireta" element={<ComunicacaoIndireta />} />
+      <Route path="useRef" element={<UseRef />} />
+      <Route path="useEffect" element={<UseEffect />} />
+      <Route path="tradutor" element={<Tradutor />} />
+      <Route path="revisao" element={<Revisao />} />
+
       <Route path="*" element={<Pagina404 />} />
     </Route>
   )
 );
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  // <StrictMode>
     <RouterProvider router={rotas} />
-  </StrictMode>
+  /* </StrictMode> */
 );

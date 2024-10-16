@@ -4,6 +4,8 @@ import {
   IconHome,
   IconInfoCircle,
   IconRouteAltLeft,
+  IconMessageUp,
+  IconMessageDown,
   IconSquareRoundedNumber1,
 } from "@tabler/icons-react";
 import { NavLink } from "react-router-dom";
@@ -63,15 +65,60 @@ export function Menu() {
 
         <span className="pt-4 pl-3 text-xs text-zinc-500">Estado</span>
 
-        <NavLink to="estado1" className={getEstilo}>
+        <NavLink to="semEstado" className={getEstilo}>
           <IconSquareRoundedNumber1 />
-          Estado 1
+          Sem Estado
+        </NavLink>
+
+        <NavLink to="comEstado" className={getEstilo}>
+          <IconSquareRoundedNumber1 />
+          Com Estado
+        </NavLink>
+
+        <NavLink to="campoTexto" className={getEstilo}>
+          <IconSquareRoundedNumber1 />
+          Campo Texto
+        </NavLink>
+
+        <NavLink to="calcStep" className={getEstilo}>
+          <IconSquareRoundedNumber1 />
+          Calc Step
+        </NavLink>
+
+        <span className="pt-4 pl-3 text-xs text-zinc-500">Comunicacão </span>
+
+        <NavLink to="comunicacaoDireta" className={getEstilo}>
+          <IconMessageUp />
+          Comunicação Direta
+        </NavLink>
+
+        <NavLink to="comunicacaoIndireta" className={getEstilo}>
+          <IconMessageDown />
+          Comunicação Indireta
         </NavLink>
       </nav>
+      <span className="pt-4 pl-3 text-xs text-zinc-500">Hooks Básicos </span>
 
-      <footer className="absolute bottom-0 p-2 flex justify-center">
-        <span>Desenvolvimento Web 2</span>
-      </footer>
+      <NavLink to="useRef" className={getEstilo}>
+          <IconMessageUp />
+          UseRef
+        </NavLink>
+
+        <NavLink to="useEffect" className={getEstilo}>
+          <IconMessageUp />
+          UseEffect
+        </NavLink>
+
+        <span className="pt-4 pl-3 text-xs text-zinc-500">Exercícios</span>
+        <NavLink to="tradutor" className={getEstilo}>
+          <IconMessageUp />
+          Tradutor
+        </NavLink>
+
+        <NavLink to="revisao" className={getEstilo}>
+          <IconMessageUp />
+          Revisão
+        </NavLink>
     </aside>
   );
 }
